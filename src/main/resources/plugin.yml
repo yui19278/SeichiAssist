@@ -117,6 +117,11 @@ commands:
     usage: /<command>
     permission-message: *denied
     permission: seichiassist.hat
+  ec:
+    description: エンダーチェストを開く
+    usage: /<command>
+    permission: seichiassist.ec
+    permission-message: *denied
 permissions:
   seichiassist.*:
     default: false
