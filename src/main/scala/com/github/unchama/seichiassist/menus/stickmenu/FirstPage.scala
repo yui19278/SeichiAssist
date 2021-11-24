@@ -367,7 +367,8 @@ object FirstPage extends Menu {
         .seichiAmountDataRepository(player)
         .read.toIO
         .flatMap(breakAmountData => IO {
-          val level = breakAmountData.levelCorrespondingToExp.level
+          import cats.implicits._
+          val level = breakAmountData.levelCorrespondingToExp
           val minimumRequiredLevel = environment.enderChestAccessApi.minimumLevel.unsafeRunSync()
           val hasEnoughLevel = level >= minimumRequiredLevel
           val enderChest = player.getEnderChest
