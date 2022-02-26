@@ -28,22 +28,22 @@ class GachaItemListener(implicit manaApi: ManaApi[IO, SyncIO, Player]) extends L
       player.playSound(player.getLocation, Sound.ENTITY_WITCH_DRINK, 1.0F, 1.2F)
     }
 
-    if (Util.loreIndexOf(lore, "マナ回復（小）") > 0) {
+    if (Util.loreIndexOf(lore, "マナ回復（300）") > 0) {
       manaApi.manaAmount(player).restoreAbsolute(ManaAmount(300)).unsafeRunSync()
       player.playSound(player.getLocation, Sound.ENTITY_WITCH_DRINK, 1.0F, 1.2F)
     }
 
-    if (Util.loreIndexOf(lore, "マナ回復（中）") > 0) {
+    if (Util.loreIndexOf(lore, "マナ回復（1500）") > 0) {
       manaApi.manaAmount(player).restoreAbsolute(ManaAmount(1500)).unsafeRunSync()
       player.playSound(player.getLocation, Sound.ENTITY_WITCH_DRINK, 1.0F, 1.2F)
     }
 
-    if (Util.loreIndexOf(lore, "マナ回復（大）") > 0) {
+    if (Util.loreIndexOf(lore, "マナ回復（10000）") > 0) {
       manaApi.manaAmount(player).restoreAbsolute(ManaAmount(10000)).unsafeRunSync()
       player.playSound(player.getLocation, Sound.ENTITY_WITCH_DRINK, 1.0F, 1.2F)
     }
 
-    if (Util.loreIndexOf(lore, "マナ回復（極）") > 0) {
+    if (Util.loreIndexOf(lore, "マナ回復（100000）") > 0) {
       manaApi.manaAmount(player).restoreAbsolute(ManaAmount(100000)).unsafeRunSync()
       player.playSound(player.getLocation, Sound.ENTITY_WITCH_DRINK, 1.0F, 1.2F)
     }
